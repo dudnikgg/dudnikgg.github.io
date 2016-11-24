@@ -1,0 +1,8 @@
+{
+  "bootstrapVersion": 3,
+  "reBootstrapCustomizations": "./app/assets/sass/variables.sass",
+  "scripts": false,
+  "styles": true,
+  "styleLoaders": ["style", "css", "resolve-url", "sass"],
+  "appStyles": "./app/assets/sass/paper-theme.scss"
+}
