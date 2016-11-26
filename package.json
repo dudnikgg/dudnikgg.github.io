@@ -2,7 +2,7 @@
   "name": "myGoals-app",
   "version": "0.0.1",
   "description": "Application for reach our goals",
-  "main": "webpack.config.js",
+  "main": "public/index.html",
   "repository": {
     "url": "git@github.com:dudnikgg/dudnikgg.github.io.git",
     "type": "git"
@@ -20,6 +20,7 @@
     "bootstrap-loader": "^2.0.0-beta.15",
     "css-loader": "^0.26.0",
     "file-loader": "^0.9.0",
+    "html-webpack-plugin": "^2.24.1",
     "node-sass": "^3.13.0",
     "pug-loader": "^2.3.0",
     "resolve-url-loader": "^1.6.0",
@@ -35,6 +36,7 @@
     "angular": "^1.5.8",
     "angular-ui-bootstrap": "^2.2.0",
     "bootstrap-sass": "^3.3.7",
+    "html-webpack-plugin": "^2.24.1",
     "pug": "^2.0.0-beta6"
   }
 }

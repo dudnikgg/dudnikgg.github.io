@@ -1,5 +1,4 @@
 import angular from 'angular';
-// import bootstrap from 'bootstrap-loader';
 require('bootstrap-loader');
 
 // Components

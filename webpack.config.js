@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   context: path.resolve(__dirname, 'app'),
@@ -14,11 +15,11 @@ module.exports = {
   },
 
   devServer: {
-    contentBase: __dirname + '\\public',
+    contentBase: __dirname + '\\app',
     inline: true,
     colors: true,
     open: true,
-    port: '3000'
+    port: '9999'
   },
   module: {
     loaders: [
@@ -51,7 +52,7 @@ module.exports = {
       // the file-loader emits files.
       {
         test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: 'url?limit=10000&minetype=application/font-woff'
+        loader: 'url?limit=10000&name=./fonts/[name]/[hash].[ext]&minetype=application/font-woff'
       }, {
         test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         loader: 'file?name=./fonts/[name]/[hash].[ext]'
@@ -67,6 +68,10 @@ module.exports = {
     new webpack.optimize.CommonsChunkPlugin({
       name: 'common',
       minChunks: 3
+    }),
+    new HtmlWebpackPlugin({
+      template: './app.pug',
+      inject: 'body',
     })
   ]
 };
