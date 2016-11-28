@@ -19,7 +19,8 @@ module.exports = {
     inline: true,
     colors: true,
     open: true,
-    port: '9999'
+    hot: true,
+    port: '8080'
   },
   module: {
     loaders: [
@@ -70,8 +71,9 @@ module.exports = {
       minChunks: 3
     }),
     new HtmlWebpackPlugin({
-      template: './app.pug',
+      template: './index.pug',
       inject: 'body',
-    })
+    }),
+    new webpack.HotModuleReplacementPlugin()
   ]
 };

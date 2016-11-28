@@ -1,8 +1,8 @@
-// import template from './nav.pug';
-// import styles from './nav.sass';
+import template from './nav.pug';
+import styles from './nav.sass';
 
 export const NavComponent = {
-  template: "template()",
+  template: template(),
   selector: 'nav',
   bindings: {},
   controller: class navController {
